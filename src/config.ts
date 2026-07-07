@@ -3,7 +3,7 @@ import type { ThemeConfig } from './types'
 export const themeConfig: ThemeConfig = {
   // SITE INFO ///////////////////////////////////////////////////////////////////////////////////////////
   site: {
-    website: 'https://katiua.github.io/', // Site domain
+    website: 'https://katiua.github.io', // Site domain
     title: 'KATIUA.BLOG', // Site title
     author: 'KATIUA', // Author name
     description: 'Minimal blog built by Astro', // Site description
