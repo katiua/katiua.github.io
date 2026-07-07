@@ -23,7 +23,11 @@ const { posts } = Astro.props as PostListProps
             )}
             {themeConfig.date.dateOnRight && (
               <p class="date font-features">
-                <FormattedDate date={post.data.pubDate} context="list" />
+                {post.data.type ? (
+                  <span>{post.data.type}</span>
+                ) : (
+                  <FormattedDate date={post.data.pubDate} context="list" />
+                )}
               </p>
             )}
           </div>

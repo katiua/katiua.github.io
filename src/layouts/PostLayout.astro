@@ -19,7 +19,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 
 import { themeConfig } from '@/config'
 
-const { title, pubDate, readingTime, toc = [], contentFeatures = {} } = Astro.props as PostLayoutProps
+const { title, pubDate, readingTime, toc = [], contentFeatures = {}, type } = Astro.props as PostLayoutProps
 
 const postSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || ''
 const ogImage = `/open-graph/${postSlug}.png`
@@ -46,7 +46,7 @@ const shouldRenderLinkCard = themeConfig.post.linkCard && contentFeatures.hasLin
         <div class="title">
           <h1>{title}</h1>
           <div class="date">
-            <FormattedDate date={pubDate} context="post" />
+            {type ? <span>{type}</span> : <FormattedDate date={pubDate} context="post" />}
             {
               themeConfig.post.readingTime && readingTime && (
                 <span class="reading-time">

@@ -7,10 +7,6 @@ This content will be displayed at the top of the index page.
 You can leave this empty if you don’t want to show any content.
 -->
 
-A static blog theme based on [Astro](https://astro.build), _designed for clarity and focus_.
+Hi, I'm Katiua — a web frontend engineer building things on the web.
 
-With a deliberately minimal design, this layout ensures your content takes center stage. It's built for flexibility, offering customization options that honor its clean and elegant aesthetic.
-
-Effortlessly share your thoughts in a calm & dustless space.
-
-Check posts for details and view source on [GitHub](https://github.com/the3ash/astro-chiri).
+I write about frontend development, sharing what I learn and the tools I use. This blog is a calm space to document my journey and explore ideas in depth.
