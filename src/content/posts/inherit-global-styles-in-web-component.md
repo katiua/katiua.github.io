@@ -40,7 +40,7 @@ function addGlobalStylesToShadowRoot(shadowRoot: ShadowRoot) {
 }
 ```
 
-然后在组件的 `connectedCallback` 中调用 `addGlobalStylesToShadowRoot`：
+然后在组件的 `connectedCallback` （在可访问 `shadowRoot` 的阶段）中调用 `addGlobalStylesToShadowRoot`：
 
 ```ts
 connectedCallback() {

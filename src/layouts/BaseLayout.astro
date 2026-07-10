@@ -54,6 +54,18 @@ const finalWidth = shouldUseCustomWidth ? `${widthValue}rem` : '25rem'
         }
       }
     </script>
+
+    <script>
+      import Lenis from 'lenis'
+      new Lenis({
+        autoRaf: true,
+        allowNestedScroll: true,
+        anchors: true,
+        virtualScroll({ event }) {
+          return !event.shiftKey
+        }
+      })
+    </script>
   </body>
 </html>
 
