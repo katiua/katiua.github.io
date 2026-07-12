@@ -1,9 +1,9 @@
 ---
-title: 'Web Component 如何继承全局样式'
+title: 'Web Components 如何继承全局样式'
 pubDate: '2026-07-09'
 ---
 
-Web Component 的一大卖点是 **Shadow DOM 的样式隔离**：组件内部的样式不会泄漏出去，外部的样式也进不来。这在写通用组件时很省心，但当你希望组件复用页面里已有的一套设计系统（比如 Tailwind、UnoCSS 生成的全局样式，或是自定义的 CSS 变量与工具类）时，隔离反而成了阻碍——Shadow DOM 里的元素拿不到 `document` 上定义的任何样式。
+Web Components 的一大卖点是 **Shadow DOM 的样式隔离**：组件内部的样式不会泄漏出去，外部的样式也进不来。这在写通用组件时很省心，但当你希望组件复用页面里已有的一套设计系统（比如 Tailwind、UnoCSS 生成的全局样式，或是自定义的 CSS 变量与工具类）时，隔离反而成了阻碍——Shadow DOM 里的元素拿不到 `document` 上定义的任何样式。
 
 本文的做法是：把页面上现有的全局样式表**复制一份注入到 Shadow Root**，让组件在保持隔离的同时，仍能「继承」全局样式。
 
